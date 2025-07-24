@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quail Jaya Farm</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <header class="header-container">
+            <div class="logo">
+                <img src="pic/(crop1)Remove Background logo.png" alt="Logo Quail Jaya Farm">
+            </div>
+        <nav>
+            <ul id="menu-utama">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <section class="galeri">
+        <h2>Galeri Peternakan</h2>
+        <div class="slider-container">
+          <button class="prev">&#10094;</button>
+          <div class="slider">
+            <img src="pic\Peluang-Usaha-Ternak-Puyuh-dan-Analisa-Usahanya.jpg" alt="1" class="slide active">
+            <img src="pic\7ples5ph98.jpg" alt="2" class="slide">
+            <img src="pic\feb707ed-1c11-41c8-81a6-727660475eb3_11.jpeg" alt="3" class="slide">
+            <img src="pic\1.jpg" alt="4" class="slide">
+          </div>
+          <button class="next">&#10095;</button>
+          </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+      <p>&copy; 2025 Quail Jaya Farm | Dibuat oleh Arsita Rahmawati Dewi R | Informatika - Universitas Siber Asia</p>
+    </footer>
+
+    <script>
+      const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+document.querySelector('.next').addEventListener('click', () => {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+});
+    </script>
+</body>
+</html>
